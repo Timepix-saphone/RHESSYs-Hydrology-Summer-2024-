@@ -1,0 +1,33 @@
+wb_msr folder (water balance _ multi-scale routing)
+
+organize_basins.R - reads in csv files, combines and explores with plots
+
+water balance model outputs - entire basin or patch fam: 
+share_bas_wPavement_50tree.csv - model output of patch family with 50% tree 
+share_bas_wPavement_50grass.csv - model output of patch family with 50% turfgrass
+share_bas_wPavement_50.csv - model output of patch family with 50% impervious 
+
+drt_vars.rds - model output of year day during 2012-2016 drought, with different categories of patch family, irrigation scenario, veg param uncertainty, and sharing param uncertainty. Model output include tree fluxes only, water (et) and carbon (npp, gpp = cdf.psn_to_cpool)
+
+
+variables
+- run - ID for turfgrass parameter uncertainty
+- sh - sharing coefficient value 
+- irr - irrigation scenario, either on/off/-25% 
+- patch_fam - set up of patch family 
+- yd - day of year 
+- year 
+- surface_transfer - amount of surface water towards the tree patch (negative means tree is losing water)
+- sub_trans - amount of subsurface water towards the tree patch (positive is gaining, negative is losing)
+- et - evapotranspiration from tree
+- npp - net primary productivity from tree patch 
+- cdf.psn_to_cpool - photosynthesis from tree patch 
+- sp_code - species of tree 
+- watbal - water balance, internally calculated, not accurate 
+- date
+- month 
+- day
+- total_water_in - rain and irrigation
+- streamflow - total runoff from patch family 
+- recharge - total infiltration 
+- rain 
